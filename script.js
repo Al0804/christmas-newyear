@@ -60,11 +60,11 @@ for (let i = 0; i < 5; i++) {
 }
 
 {
-  document.getElementById("background-music").play();
+  document.getElementById("music").play();
 }
 
 // Mendapatkan elemen audio
-const music = document.getElementById("background-music");
+const music = document.getElementById("music");
 
 // Memutar audio saat halaman dimuat
 window.onload = function () {
