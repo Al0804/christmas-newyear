@@ -59,14 +59,24 @@ for (let i = 0; i < 5; i++) {
   setTimeout(createFirework, i * 200);
 }
 
-{
-  document.getElementById("music").play();
-}
 
-// Mendapatkan elemen audio
-const music = document.getElementById("music");
+    // Mendapatkan elemen audio dan tombol
+    const audio = document.getElementById('background-music');
+    const playButton = document.getElementById('play-button');
 
-// Memutar audio saat halaman dimuat
-window.onload = function () {
-  music.play();
-};
+    // Fungsi untuk memulai audio
+    function playAudio() {
+        audio.play().then(() => {
+            playButton.style.display = 'none'; // Sembunyikan tombol setelah audio diputar
+        }).catch(function(error) {
+            console.log("Audio tidak dapat diputar: ", error);
+        });
+    }
+
+    // Menambahkan event listener untuk tombol play
+    playButton.addEventListener('click', playAudio);
+
+    // Memutar audio saat halaman dimuat (coba, tetapi mungkin tidak berhasil di semua browser)
+    window.addEventListener('load', function() {
+        playAudio();
+    });

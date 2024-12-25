@@ -65,6 +65,21 @@ body {
   font-weight: bold;
 }
 
+#play-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #44ff44; /* Warna latar belakang */
+    color: white; /* Warna teks */
+    border: none; /* Tanpa border */
+    border-radius: 5px; /* Sudut membulat */
+    cursor: pointer; /* Pointer saat hover */
+    margin-top: 20px; /* Jarak ke bawah dari elemen di atasnya */
+}
+
+#play-button:hover {
+    background-color: #33cc33; /* Warna saat hover */
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
